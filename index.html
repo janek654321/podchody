@@ -40,7 +40,7 @@ var markers = new ol.layer.Vector({
   style: new ol.style.Style({
     image: new ol.style.Icon({
       anchor: [0.5, 1],
-      src: 'markerZ.png'
+      src: 'green.png'
     })
   })
 });
@@ -49,19 +49,79 @@ var marker = new ol.Feature(new ol.geom.Point(ol.proj.fromLonLat([lo, la])));
 markers.getSource().addFeature(marker);
 }	  
 
-function dodajMarkerCz(lo, la) {
+function dodajMarkerZC(lo, la) {
 var markers2 = new ol.layer.Vector({
   source: new ol.source.Vector(),
   style: new ol.style.Style({
     image: new ol.style.Icon({
       anchor: [0.5, 1],
-      src: 'markerCz.png'
+      src: 'greenC.png'
     })
   })
 });
 map.addLayer(markers2);
 var marker = new ol.Feature(new ol.geom.Point(ol.proj.fromLonLat([lo, la])));
 markers2.getSource().addFeature(marker);
+}
+
+function dodajMarkerC(lo, la) {
+var markers3 = new ol.layer.Vector({
+  source: new ol.source.Vector(),
+  style: new ol.style.Style({
+    image: new ol.style.Icon({
+      anchor: [0.5, 1],
+      src: 'red.png'
+    })
+  })
+});
+map.addLayer(markers3);
+var marker = new ol.Feature(new ol.geom.Point(ol.proj.fromLonLat([lo, la])));
+markers3.getSource().addFeature(marker);
+}
+
+function dodajMarkerCC(lo, la) {
+var markers4 = new ol.layer.Vector({
+  source: new ol.source.Vector(),
+  style: new ol.style.Style({
+    image: new ol.style.Icon({
+      anchor: [0.5, 1],
+      src: 'redC.png'
+    })
+  })
+});
+map.addLayer(markers4);
+var marker = new ol.Feature(new ol.geom.Point(ol.proj.fromLonLat([lo, la])));
+markers4.getSource().addFeature(marker);
+}
+
+function dodajMarkerN(lo, la) {
+var markers5 = new ol.layer.Vector({
+  source: new ol.source.Vector(),
+  style: new ol.style.Style({
+    image: new ol.style.Icon({
+      anchor: [0.5, 1],
+      src: 'blue.png'
+    })
+  })
+});
+map.addLayer(markers5);
+var marker = new ol.Feature(new ol.geom.Point(ol.proj.fromLonLat([lo, la])));
+markers5.getSource().addFeature(marker);
+}
+
+function dodajMarkerNC(lo, la) {
+var markers6 = new ol.layer.Vector({
+  source: new ol.source.Vector(),
+  style: new ol.style.Style({
+    image: new ol.style.Icon({
+      anchor: [0.5, 1],
+      src: 'blueC.png'
+    })
+  })
+});
+map.addLayer(markers6);
+var marker = new ol.Feature(new ol.geom.Point(ol.proj.fromLonLat([lo, la])));
+markers6.getSource().addFeature(marker);
 }
 
 function zniszcz(){
