@@ -8,8 +8,12 @@
   <body>
     <div id="map" style="position: absolute;height: 98%;width: 98%;"></div>
     <script type="text/javascript">
+	var controls = ol.control.defaults({rotate: false}); 
+	var interactions = ol.interaction.defaults({altShiftDragRotate:false, pinchRotate:false});
       var map = new ol.Map({
         target: 'map',
+	controls: controls,
+    	interactions: interactions,
         layers: [
           new ol.layer.Tile({
             source: new ol.source.OSM()
@@ -20,13 +24,7 @@
           zoom: 15
         })
       });
-	var controls = ol.control.defaults({rotate: false}); 
-var interactions = ol.interaction.defaults({altShiftDragRotate:false, pinchRotate:false});
-
-var map = new ol.Map {
-    controls: controls,
-    interactions: interactions
-};  
+	
 function dodajMarkerZ(lo, la) {
 var markers = new ol.layer.Vector({
   source: new ol.source.Vector(),
